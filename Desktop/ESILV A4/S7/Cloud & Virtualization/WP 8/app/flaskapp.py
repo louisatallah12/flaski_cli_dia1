@@ -12,8 +12,9 @@ app = Flask(__name__)
 
 def hello() :
     return "<h1> Hello World ! </h1>" 
- @app.route('/visit')
- def incr_counter():
+@app.route('/visit')
+
+def incr_counter():
     try : 
         visits = redis.incr("counter")
     except : 
